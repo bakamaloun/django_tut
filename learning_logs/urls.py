@@ -15,6 +15,8 @@ Including another URLconf
 """
 
 from django.urls import path
+from django.views.generic import TemplateView
+
 from . import views
 
 urlpatterns = [
@@ -24,4 +26,5 @@ urlpatterns = [
     path('new_topic/', views.new_topic, name='new_topic'),
     path('new_entry/<topic_id>/', views.new_entry, name='new_entry'),
     path('edit_entry/<entry_id>/', views.edit_entry, name='edit_entry'),
+
 ]

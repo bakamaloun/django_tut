@@ -1,0 +1,22 @@
+h1 {
+   font-size: 80px;
+   color: crimson;
+   font-family: helvetica;
+}
+
+form {
+    background-color: lightblue;
+    display: inline-block;
+    font-family: helvetica;
+}
+
+form > button {
+    font-family: helvetica;
+    background-color: crimson;
+    border-radius: 10px;
+}
+
+.Send {
+    font-size: 50px;
+    border-radius: 10px;
+}

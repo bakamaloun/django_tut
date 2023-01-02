@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'bootstrap3',
     'learning_logs',
     'users',
+    'rest_app',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -123,6 +125,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATICFILES_DIRS = ['static']
 
 LOGIN_URL = '/users/login/'
 

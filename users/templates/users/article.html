@@ -1,0 +1,19 @@
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+
+<p>Article {{ article }}</p>
+
+<p>Authors:</p>
+
+<ul>
+    {% for author in authors %}
+        <li>
+            <p>{{ author.name|linebreaks }}</p>
+        </li>
+    {% empty %}
+        <li>No authors</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}

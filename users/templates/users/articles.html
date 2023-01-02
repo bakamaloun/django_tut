@@ -1,0 +1,17 @@
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+
+<p>Articles</p>
+
+<ul>
+    {% for article in articles %}
+        <li>
+            <a href="{% url 'users:articles' %}">{{ article }} </a>
+        </li>
+    {% empty %}
+        <li>No articles yet</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}

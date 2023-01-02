@@ -1,0 +1,33 @@
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REST JS</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/rest.css' %}">
+</head>
+<body ng-app="rest" ng-controller="restController">
+    <h1>REST + JS</h1>
+
+    <form ng-submit="restAdd()">
+        <input type="text" ng-model="restInput" placeholder="add request">
+        <button type="submit" ng-click="saveData()">Submit</button>
+    </form>
+    <br>
+
+    <div ng-repeat="rest in restList">
+        <input type="checkbox" ng-model="rest.sent"><span ng-bind="rest.restText"></span>
+    </div>
+
+    <p>
+        <button class="Send" ng-click="remove()">Remove</button>
+    </p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <script src="{% static 'js/rest.js' %}"></script>
+</body>
+</html>
+
+{% endblock content %}

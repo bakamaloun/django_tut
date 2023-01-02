@@ -1,0 +1,29 @@
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+
+<title>Friends and Users</title>
+
+<p>Users:</p>
+<ul>
+    {% for user in users %}
+        <li>
+            <a href="{% url 'users:add_friend' user.id %}">{{ user }} </a>
+        </li>
+    {% empty %}
+        <li>No users yet</li>
+    {% endfor %}
+</ul>
+
+<p>Friends:</p>
+<ul>
+    {% for friend in friends %}
+        <li>
+            <a href="{% url 'users:delete_friend' friend.id %}">{{ friend }} </a>
+        </li>
+    {% empty %}
+        <li>No friends yet</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
